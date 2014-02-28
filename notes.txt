@@ -53,4 +53,10 @@ git merge moons --> auto matically resolves the conflict without manually doing 
 
 github in phys ethz gitlab? free private and public 
 
+# create new repo on github, then push local ones up
+git remote add origin https://github.com/chihway/bc_test.git  --> origin refers to the address
+git push origin master   --> where to and what to push
+
+
+
 
