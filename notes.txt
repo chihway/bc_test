@@ -1,0 +1,56 @@
+git init . --> in directory that one wants to use
+
+echo "Mars' mass is 6.4E23 kg." > mars.txt
+
+git status
+git add 
+git rm --cache mars.txt
+git commit -m "message" mars.txt
+git diff mars.txt   # gives unstaged
+git diff --staged   # staged
+git log 
+
+# commit 47dd39de81e2e2c63f668d3013c45b12694a534b --> commit hash!
+
+git diff 47dd39 mars.txt
+git diff HEAD~1 mars.txt   --> difference between now and 1 ago?
+
+
+# use with care, this can be dangerous!!
+git checkout -- mars.txt --> get stuff back before adding and/or committing
+git reset --hard HEAD --> get stuff back after staging
+
+git branch moons
+git branch
+git checkout moons
+
+git commit -m "" --> can abort the editor, there is a default editor that should open up autmatically
+
+git checkout master
+git merge moons  --> merge moon into master
+
+git log --oneline --topo-order --graph
+gitk                                         --> visualize the branch actiities
+ungit                                        --> check this out!
+git ci -a -m "message"   --> add and commit at the same time
+
+# can merge new branches into master, then merge master into branch under development --> feature branches!
+                                                                                    --> master is always working
+# merge files with conflict
+
+Phobos is the larger of Maaars' known moons.
+<<<<<<< HEAD
+line added from moons
+=======
+line added from master
+>>>>>>> master
+
+HEAD: current branch
+master: the branch to merge
+
+git checkout master
+git merge moons --> auto matically resolves the conflict without manually doing it! smart :)
+
+github in phys ethz gitlab? free private and public 
+
+
